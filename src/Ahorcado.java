@@ -7,7 +7,6 @@ public class Ahorcado {
         String[] PalabrasSecretas = {"sube","avion","camionero","electrista"};
         int intentosMaximos = 10,errores = 0;
         boolean gano=false;
-        boolean contieneCaracter=false;
         Random r = new Random();
         Scanner scan = new Scanner(System.in);
         int numeroAleatorio = r.nextInt(PalabrasSecretas.length);
@@ -22,7 +21,7 @@ public class Ahorcado {
         
         System.out.println("Bienvenidos a el ahorcados de Ruben!");
         while (!gano && errores<intentosMaximos) {
-            
+            boolean contieneCaracter=false;
             System.out.println("La palabra por adivinar es : "+ String.valueOf(caracteresRecibidos) + " y contiene "+ PalabraSecretaSeleccionada.length()+" Caracteres");
             System.out.print("Ingrese una letra:");
             char letra = Character.toLowerCase(scan.next().charAt(0));
